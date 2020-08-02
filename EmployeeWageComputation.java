@@ -144,13 +144,13 @@ public static void main(String args[]){
 
 //UC-6
 
-class WagesTillConditionRefactor{
-        final static int isPartTime=0;
-        final static int isFullTime=1;
-        final static int empRatePerHour=20;
-        final static int totalDays=20;
-        final static int totalHours=100;
-public static void calculate(){
+class Wage{
+        final int isPartTime=0;
+        final int isFullTime=1;
+        final int empRatePerHour=20;
+        final int totalDays=20;
+        final int totalHours=100;
+public void calculate(){
         int hours=0;
         int days=0;
         int salary=0;
@@ -175,7 +175,14 @@ public static void calculate(){
   }
                 System.out.println(totalSalary);
 }
+}
+public class WagesTillCondition{
 public static void main(String args[]){
-calculate();
+        Wage wage=new Wage();
+        wage.calculate();
 }
 }
+
+
+
+
